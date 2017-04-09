@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>What's the Word?</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		td{
+    	padding:0 50px 0 50px;
+		}
+		a{
+			color:black;
+		}
+		a:link{
+			text-decoration: none;
+		}
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-decoration: none;
+			color: black;
+		}
+		hr{
+			border: 0;
+  		height: 1px;
+  		background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  		background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  		background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  		background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+			<center>
+			<p style="font-size:100px; display:inline">What's the word?</p>
+			<p style="font-size:30px">Your center for the news generating the most conversation everyday.</p>
+			<hr>
+			<hr>
+			</center>
+			<br>
+			<br>
+			<br>
+			<center>
+				{% for key in newstories}
+						<p><a href="{{ key.0 }}">{{ key.1 }}</a><p>
+				{% endfor %}
+			</center>
+</body>
+
+</html>
