@@ -99,4 +99,4 @@ def get_comment_counts(list_input):
 # FOR WASHINGTON POST
 def produce_final_dictionary():
     list_of_urls = get_article_urls(tokenized)
-    return get_comment_counts(list_of_urls[:5])
+    return get_comment_counts(list_of_urls[:6])

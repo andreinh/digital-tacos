@@ -16,12 +16,12 @@ business_list = business.get_articles(business_soup)
 
 def index(request):
     top_stories = top_list(politics_list,science_list,business_list)
-    context = {'topstores':top_stories}
-    return render(request,'website/home.html',context)
+    context = {'topstories':top_stories}
+    return render(request,'header.html',context)
 
 def top_list(politics_list,science_list,business_list):
     new_list = [15]
-    for i in range [0,4]:
+    for i in range(5):
         new_list.append(politics_list[i])
         new_list.append(science_list[i])
         new_list.append(business_list[i])

@@ -4,10 +4,15 @@
 <head>
 	<title>What's the Word?</title>
 	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/actionslide.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
 	<style type="text/css">
+		p{
+			font-family: 'Oswald', sans-serif;
+		}
 		td{
     	padding:0 50px 0 50px;
 		}
@@ -36,6 +41,7 @@
 	</style>
 </head>
 
+
 <body class="body" style="background-color:#f6f6f6">
 			<center>
 			<p style="font-size:100px; display:inline">What's the word?</p>
@@ -45,12 +51,14 @@
 			</center>
 			<br>
 			<br>
-			<br>
+			<div>
 			<center>
-				{% for key in newstories}
-						<p><a href="{{ key.0 }}">{{ key.1 }}</a><p>
+				{% for key in topstories %}
+						<p><a href="{{ key.0 }}">{{ key.1 }}</a></p>
 				{% endfor %}
 			</center>
+		</div>
+
 </body>
 
 </html>
